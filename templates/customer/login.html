@@ -1,0 +1,21 @@
+{%extends 'base.html'%}
+{%block title%}
+customer login
+{%endblock title%}
+
+{%block body%}
+<h1>welcome to cutomer login form</h1>
+    <center>
+        <form method="post">
+            {%csrf_token%}
+            <label for="un">USERNAME : </label>
+            <input type="text" id="un" name="un"> <br><br>
+
+            <label for="pw">PASSWORD : </label>
+            <input type="text" id="pw" name="pw"> <br><br>
+
+             <a href="{% url 'forget_password'%}">forget password</a>
+            <input type="submit" value="login">
+        </form>
+    </center>
+{%endblock body%}

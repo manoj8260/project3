@@ -1,0 +1,18 @@
+{%extends 'base.html'%}
+{%block title%}
+customer profile
+{%endblock title%}
+
+{%block body%}
+<style>
+    img{
+        width: 100px;
+        height: 100px;
+    }
+</style>
+<h1>welcome to profile page </h1>
+
+    <img src="{{PO.profile_pic.url}}" alt="">
+    <h1>{{UO.username}}</h1>
+    <h1>{{PO.pno}}</h1>
+{%endblock body%}0

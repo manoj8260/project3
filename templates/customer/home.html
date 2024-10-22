@@ -1,0 +1,59 @@
+{% extends 'base.html'%}
+{%block title%}
+customer home
+{%endblock title%}
+
+{%block body%}
+<style>
+*{
+     padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    }
+ body{
+        width: 100%;
+        height: 100vh;
+    }
+
+ span{
+    color: red;
+ }
+ #brands{
+    width: 100%;
+    height:15% ;
+    padding-top: 30px;
+    
+ }
+ #brands ul,li{
+    display: flex;
+    justify-content:center;
+    gap: 10px;  
+ }
+ #bikes{
+    display: flex;
+    justify-content: space-between;
+ }
+</style>
+<center>
+    <h1>welcome to home page <span> {{UO.username}}</span></h1>
+</center>
+<div id="brands">
+    <ul>
+        {%for brand in brands%}
+         <li><button>{{brand.company}}</button></li>
+        {%endfor%}
+    </ul>
+</div>
+<div id="bikes">
+    {%for bike in bikes %}
+    <div class="card" style="width: 18rem;">
+        <img src="..." class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+    {%endfor%}
+</div>
+{%endblock body%}

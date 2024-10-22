@@ -1,0 +1,16 @@
+{%extends 'base.html'%}
+{%block title%}
+customer register
+{%endblock title%}
+
+{%block body%}
+<h1>welcome to cutomer register form</h1>
+    <center>
+        <form  method="post" enctype="multipart/form-data">
+            {%csrf_token%}
+            {{ECFO.as_p}}
+            {{EPFO.as_p}}
+            <input type="submit" value="register">
+        </form>
+    </center>
+{%endblock body%}
